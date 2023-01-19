@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from '../redux/userActions';
+import { increment, decrement } from '../redux/accountReducer';
 
 const Account = () => {
     const [input, setInput] = useState(0)
-    const balance = useSelector((state)=>state.balance)
+    const balance = useSelector((state)=>state.account.balance)
     const dispatch = useDispatch()
     
     const _handleIncrement = (e) => {
